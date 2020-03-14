@@ -11,7 +11,7 @@
  
          </div>
          <div class="form-group">
-             <label for="position" >position</label>
+             <label for="position" >Posición</label>
              <input type="text" name="position" class="form-control" #position="ngModel" 
              [(ngModel)]="employeeService.selectedEmployee.position" 
               required pattern="[a-zA-Z]+">
@@ -19,7 +19,7 @@
      
          </div>
          <div class="form-group">
-                 <label for="office" >office</label>
+                 <label for="office" >Oficina</label>
                  <input type="text" name="office" class="form-control" #office="ngModel" 
                  [(ngModel)]="employeeService.selectedEmployee.office" 
                   required pattern="[a-zA-Z]+">
@@ -27,7 +27,7 @@
          
          </div>
          <div class="form-group">
-             <label for="salary" >salary</label>
+             <label for="salary" >Salario</label>
              <input type="number" name="salary" class="form-control" #salary="ngModel" 
              [(ngModel)]="employeeService.selectedEmployee.salary" 
               required >
@@ -44,9 +44,9 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col">Nombre</th>
-            <th scope="col">Position</th>
-            <th scope="col">office</th>
-            <th scope="col">salary</th>
+            <th scope="col">Posición</th>
+            <th scope="col">Oficina</th>
+            <th scope="col">Salario</th>
             <th scope="col">Operaciones</th>
           </tr>
         </thead>
