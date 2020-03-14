@@ -7,6 +7,7 @@
          <input type="text" name="name" class="form-control" #name="ngModel" 
          [(ngModel)]="employeeService.selectedEmployee.name" 
           required pattern="[a-zA-Z]+">
+          <small *ngIf="!name.valid && name.touched" class="invalid-feedback d-block">El nombre no es válido</small>
  
          </div>
          <div class="form-group">
@@ -14,6 +15,7 @@
              <input type="text" name="position" class="form-control" #position="ngModel" 
              [(ngModel)]="employeeService.selectedEmployee.position" 
               required pattern="[a-zA-Z]+">
+              <small *ngIf="!position.valid && position.touched" class="invalid-feedback d-block">La posicion no es válida</small>
      
          </div>
          <div class="form-group">
@@ -21,6 +23,7 @@
                  <input type="text" name="office" class="form-control" #office="ngModel" 
                  [(ngModel)]="employeeService.selectedEmployee.office" 
                   required pattern="[a-zA-Z]+">
+                  <small *ngIf="!office.valid && office.touched" class="invalid-feedback d-block">Oficina requerida</small>
          
          </div>
          <div class="form-group">
@@ -30,7 +33,8 @@
               required >
      
      </div>
-     <input type="submit" class="btn btn-success">
+     <button type="submit" class="btn btn-success">Enviar</button>
+     <button  (click)="resetForm(employeeForm)" class="btn btn-danger">Limpiar</button>
          
  
  
@@ -53,6 +57,9 @@
             <td>{{employee.position}}</td>
             <td>{{employee.office}}</td>
             <td>{{employee.salary}}</td>
+            <td>
+              <button  type="submit" class="btn btn-success">Enviar</button>
+            </td>
           </tr>
          
         </tbody>
